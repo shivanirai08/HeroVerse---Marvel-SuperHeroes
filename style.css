@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: "Glory",Arial, sans-serif;
+    background-color: #dadada;
+    /* background:linear-gradient(to right,#00f29f,#00b9e6); */
+}
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.landing-screen{
+    margin: 1vw;
+    background-color: crimson;
+    position: relative;
+    background-image: url(banner.png);
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 120%;
+    background-attachment: fixed;
+    height: 80vh;
+}
+
+.video {
+    z-index: 0;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+    background-image: url(banner.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+.video video {
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url(banner.png);
+}
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 4vw;
+    padding-right: 1vw;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content h1{
+    font-size: 3vw;
+    background:linear-gradient(to right,#00f29f,#00b9e6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.content h3{
+    font-size: 2vw;
+    background: linear-gradient(to right,#00f29f,#00b9e6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.content p{
+    font-size: 1.5vw;
+}
+
+.play-again, .muted, .audio {
+    border: 1px white solid;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.play-again {
+    display: none;
+}
+
+.muted {
+    padding: 2px 4px;
+    display: none;
+}
+
+.muted svg {
+    height: 24px;
+    width: 24px;
+}
+
+.audio {
+    padding: 1px;
+}
+
+.audio svg {
+    fill: white;
+}
+
+.heroes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2vw;
+}
+.card{
+    margin: 1vw;
+    height: 45vh;
+    width: 15vw;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f5f5f5;
+    /* background: linear-gradient(to bottom, #ff7e5f, #feb47b); */
+    transition: background 0.5s ease;
+    overflow: hidden;
+    position: relative;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc);
+    transition: top 0.5s ease-in-out;
+    z-index: 0;
+}
+.card:hover::before {
+    top: 0; 
+}
+.card-content{
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+.card-content img{
+    height: 70%;
+    width: 100%;
+    padding: 4%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 1;
+}
+.card-content h3{
+    text-align: center;
+    margin-top: 8%;
+    font-size: 2vw;
+    z-index: 1;
+}
+.card:hover{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.6s ease-in-out;
+}
+
+
+footer{
+    height: 40vh;
+    margin : 6vw 0 1vw;
+    padding-left : 4vw;
+    display: flex;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+footer>p{
+    height: 100%;
+    width: 25%;
+    border-right: 2px black solid;
+    font-size: 1.6vw;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 2vw;
+}
+footer p:first-child{
+    padding-top:1vw ;
+    width: 17%;
+    border: none;
+}
+#footer-content{
+    height: 100%;
+    width: 44%;
+}
+#footer-content>p{
+    width: 100%;
+    font-size: 1.6vw;
+    font-weight: 600;
+    padding: 2vw 6vw;
+    /* text-align: center; */
+    border-bottom: 2px solid black;
+}
+#social-media{
+    padding: 0 6vw;
+    height: 68%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    justify-content: center;
+}
+#social-media #logos{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    font-size: 1.4vw;
+}
