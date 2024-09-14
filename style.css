@@ -13,7 +13,6 @@ html , body{
 body {
     font-family: "Glory",Arial, sans-serif;
     background-color: #dadada;
-    /* background:linear-gradient(to right,#00f29f,#00b9e6); */
 }
 #main{
     height: 100%;
@@ -43,6 +42,7 @@ nav {
 
 .logo img {
     height: 36px;
+    border-radius: 50%;
 }
 
 .options {
@@ -195,6 +195,7 @@ nav {
 .card{
     margin: 1vw;
     height: 45vh;
+    min-width: 10vw;
     width: 15vw;
     border-radius: 10px;
     cursor: pointer;
@@ -300,64 +301,57 @@ footer p:first-child{
 
 
 @media only screen and (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-
     nav {
-        flex-direction: column;
+        /* flex-direction: column; */
         padding: 2vw 3vw;
         gap: 10px;
     }
-
-    .left-align, .right-align {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .logo img {
-        height: 28px;
+        height: 34px;
     }
-
-    .options {
-        flex-direction: column;
-        gap: 10px;
+    .user img {
+        height: 30px;
     }
-
     .options li {
         font-size: 14px;
+        display: none;
     }
 
     .landing-screen {
-        height: auto;
+        height: 80vh;
+    }
+    .video {
+        height: 80vh;
     }
 
     .content {
-        flex-direction: column;
-        text-align: center;
-        padding-left: 2vw;
+        justify-content: flex-end;
         padding-right: 2vw;
     }
 
-    .content h1 {
-        font-size: 6vw;
+    .content .left {
+        display: none;
     }
-
-    .content p {
-        font-size: 4vw;
+    .play-again , .muted , .audio{
+        height: 5vh;
+        width: 5vh;
     }
-
+    .muted svg {
+        height: 5vw;
+        width: 5vw;
+    }
     .heading {
         font-size: 6vw;
     }
 
     .heroes {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .card {
-        width: 80vw;
-        height: 50vh;
+        width: 42vw;
+        height: 45vh;
     }
 
     .card-content h3 {
@@ -365,16 +359,20 @@ footer p:first-child{
     }
 
     footer {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
         height: auto;
-        padding: 4vw;
+        padding: 4vw 3vw;
     }
-
+    footer p:first-child img{
+        height: 10vw;
+    }
     footer > p {
-        font-size: 3vw;
-        width: 100%;
+        font-size: 4vw;
         border-right: none;
-        padding: 2vw 0;
+        padding: 2vw;
     }
 
     #footer-content {
@@ -382,17 +380,17 @@ footer p:first-child{
     }
 
     #footer-content > p {
-        padding: 4vw;
-        font-size: 3vw;
+        padding: 4vw 3vw;
+        font-size: 4vw;
     }
 
     #social-media {
-        padding: 0;
+        padding: 1vw;
         gap: 3vw;
     }
 
     #social-media #logos {
-        font-size: 2vw;
+        font-size: 3.5vw;
         gap: 2vw;
     }
 }

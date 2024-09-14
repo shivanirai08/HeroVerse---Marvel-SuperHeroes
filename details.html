@@ -9,7 +9,12 @@
 " rel="stylesheet"/>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&display=swap");
-
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
       body {
         font-family: "Glory", Arial, sans-serif;
         background-color: #dadada;
@@ -25,11 +30,13 @@
 
       .section h1 {
         font-weight: 900;
+        padding: 2vw 0;
       }
 
       .section p {
         font-size: 1.76vw;
         font-weight: 500;
+        padding: 1vw 0;
       }
 
       #backButton {
@@ -45,16 +52,24 @@
 
       @media (max-width: 750px) {
         .section {
+          margin: 1vw;
           flex-direction: column;
           gap: 1vw;
         }
 
         .section img {
           height: 50vh;
+          width: 100%;
         }
-
+      
+        .section h1{
+          font-size: 6vw;
+        }
         .section p {
-          font-size: 2.5vw;
+          font-size: 3.6vw;
+        }
+        #backButton{
+          font-size: 4vw;
         }
       }
     </style>
